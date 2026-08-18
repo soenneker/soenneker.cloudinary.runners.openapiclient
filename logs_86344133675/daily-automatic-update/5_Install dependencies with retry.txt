@@ -1,0 +1,33 @@
+﻿2026-08-14T17:54:21.5855647Z ##[group]Run retries=5
+2026-08-14T17:54:21.5856262Z [36;1mretries=5[0m
+2026-08-14T17:54:21.5856729Z [36;1mbase_wait_time=15[0m
+2026-08-14T17:54:21.5857220Z [36;1mexponent=2[0m
+2026-08-14T17:54:21.5857693Z [36;1m[0m
+2026-08-14T17:54:21.5858130Z [36;1mfor i in $(seq 1 $retries); do[0m
+2026-08-14T17:54:21.5858693Z [36;1m  if dotnet restore; then[0m
+2026-08-14T17:54:21.5859208Z [36;1m    break[0m
+2026-08-14T17:54:21.5859670Z [36;1m  fi[0m
+2026-08-14T17:54:21.5860122Z [36;1m[0m
+2026-08-14T17:54:21.5860558Z [36;1m  if [ $i -lt $retries ]; then[0m
+2026-08-14T17:54:21.5861549Z [36;1m    wait_time=$(awk "BEGIN {print int($base_wait_time * ($exponent ^ ($i - 1)))}")[0m
+2026-08-14T17:54:21.5862549Z [36;1m    echo "dotnet restore failed, retrying in $wait_time seconds..."[0m
+2026-08-14T17:54:21.5863290Z [36;1m    sleep $wait_time[0m
+2026-08-14T17:54:21.5863780Z [36;1m  else[0m
+2026-08-14T17:54:21.5864328Z [36;1m    echo "dotnet restore failed after $retries retries."[0m
+2026-08-14T17:54:21.5865044Z [36;1m    exit 1[0m
+2026-08-14T17:54:21.5865484Z [36;1m  fi[0m
+2026-08-14T17:54:21.5865890Z [36;1mdone[0m
+2026-08-14T17:54:21.5909938Z shell: /usr/bin/bash -e {0}
+2026-08-14T17:54:21.5910287Z env:
+2026-08-14T17:54:21.5910968Z   GH__USERNAME: ***
+2026-08-14T17:54:21.5911569Z   GH__TOKEN: ***
+2026-08-14T17:54:21.5911944Z   GIT__TOKEN: ***
+2026-08-14T17:54:21.5912243Z   GIT__NAME: ***
+2026-08-14T17:54:21.5912586Z   GIT__EMAIL: ***
+2026-08-14T17:54:21.5912963Z   NUGET__TOKEN: ***
+2026-08-14T17:54:21.5913242Z   BUILD_VERSION: 4.0.153
+2026-08-14T17:54:21.5913544Z   DOTNET_ROOT: /usr/share/dotnet
+2026-08-14T17:54:21.5913848Z ##[endgroup]
+2026-08-14T17:54:23.8451801Z   Determining projects to restore...
+2026-08-14T17:54:29.5656240Z   Restored /home/runner/work/***.cloudinary.runners.openapiclient/***.cloudinary.runners.openapiclient/src/Soenneker.Cloudinary.Runners.OpenApiClient/Soenneker.Cloudinary.Runners.OpenApiClient.csproj (in 5.25 sec).
+2026-08-14T17:54:29.5711956Z   Restored /home/runner/work/***.cloudinary.runners.openapiclient/***.cloudinary.runners.openapiclient/test/Soenneker.Cloudinary.Runners.OpenApiClient.Tests/Soenneker.Cloudinary.Runners.OpenApiClient.Tests.csproj (in 5.27 sec).

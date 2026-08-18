@@ -1,0 +1,93 @@
+﻿2026-08-14T17:54:13.0367096Z ##[group]Run actions/checkout@v7
+2026-08-14T17:54:13.0368123Z with:
+2026-08-14T17:54:13.0368888Z   repository: ***/***.cloudinary.runners.openapiclient
+2026-08-14T17:54:13.0373087Z   token: ***
+2026-08-14T17:54:13.0373554Z   ssh-strict: true
+2026-08-14T17:54:13.0374022Z   ssh-user: git
+2026-08-14T17:54:13.0374503Z   persist-credentials: true
+2026-08-14T17:54:13.0375017Z   clean: true
+2026-08-14T17:54:13.0375490Z   sparse-checkout-cone-mode: true
+2026-08-14T17:54:13.0376054Z   fetch-depth: 1
+2026-08-14T17:54:13.0376506Z   fetch-tags: false
+2026-08-14T17:54:13.0376972Z   show-progress: true
+2026-08-14T17:54:13.0377451Z   lfs: false
+2026-08-14T17:54:13.0377878Z   submodules: false
+2026-08-14T17:54:13.0378345Z   set-safe-directory: true
+2026-08-14T17:54:13.0378863Z   allow-unsafe-pr-checkout: false
+2026-08-14T17:54:13.0379660Z env:
+2026-08-14T17:54:13.0380130Z   GH__USERNAME: ***
+2026-08-14T17:54:13.0380713Z   GH__TOKEN: ***
+2026-08-14T17:54:13.0381513Z   GIT__TOKEN: ***
+2026-08-14T17:54:13.0381998Z   GIT__NAME: ***
+2026-08-14T17:54:13.0382600Z   GIT__EMAIL: ***
+2026-08-14T17:54:13.0383230Z   NUGET__TOKEN: ***
+2026-08-14T17:54:13.0383685Z ##[endgroup]
+2026-08-14T17:54:13.1461854Z Syncing repository: ***/***.cloudinary.runners.openapiclient
+2026-08-14T17:54:13.1465317Z ##[group]Getting Git version info
+2026-08-14T17:54:13.1466718Z Working directory is '/home/runner/work/***.cloudinary.runners.openapiclient/***.cloudinary.runners.openapiclient'
+2026-08-14T17:54:13.1468721Z [command]/usr/bin/git version
+2026-08-14T17:54:13.1540314Z git version 2.54.0
+2026-08-14T17:54:13.1577581Z ##[endgroup]
+2026-08-14T17:54:13.1585818Z Temporarily overriding HOME='/home/runner/work/_temp/b861ac98-f020-4187-82e1-d2906ec3ab37' before making global git config changes
+2026-08-14T17:54:13.1588514Z Adding repository directory to the temporary git global config as a safe directory
+2026-08-14T17:54:13.1595394Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/***.cloudinary.runners.openapiclient/***.cloudinary.runners.openapiclient
+2026-08-14T17:54:13.1668205Z Deleting the contents of '/home/runner/work/***.cloudinary.runners.openapiclient/***.cloudinary.runners.openapiclient'
+2026-08-14T17:54:13.1682803Z ##[group]Determining repository object format
+2026-08-14T17:54:13.1702828Z ##[endgroup]
+2026-08-14T17:54:13.1704810Z ##[group]Initializing the repository
+2026-08-14T17:54:13.1714258Z [command]/usr/bin/git init /home/runner/work/***.cloudinary.runners.openapiclient/***.cloudinary.runners.openapiclient
+2026-08-14T17:54:13.1814697Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-08-14T17:54:13.1822768Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-08-14T17:54:13.1824748Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-08-14T17:54:13.1826153Z hint: call:
+2026-08-14T17:54:13.1826953Z hint:
+2026-08-14T17:54:13.1827948Z hint: 	git config --global init.defaultBranch <name>
+2026-08-14T17:54:13.1829206Z hint:
+2026-08-14T17:54:13.1830404Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-08-14T17:54:13.1832447Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-08-14T17:54:13.1834199Z hint:
+2026-08-14T17:54:13.1835487Z hint: 	git branch -m <name>
+2026-08-14T17:54:13.1836484Z hint:
+2026-08-14T17:54:13.1837665Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-08-14T17:54:13.1840382Z Initialized empty Git repository in /home/runner/work/***.cloudinary.runners.openapiclient/***.cloudinary.runners.openapiclient/.git/
+2026-08-14T17:54:13.1843293Z [command]/usr/bin/git remote add origin https://github.com/***/***.cloudinary.runners.openapiclient
+2026-08-14T17:54:13.1915819Z ##[endgroup]
+2026-08-14T17:54:13.1917860Z ##[group]Disabling automatic garbage collection
+2026-08-14T17:54:13.1919606Z [command]/usr/bin/git config --local gc.auto 0
+2026-08-14T17:54:13.1952535Z ##[endgroup]
+2026-08-14T17:54:13.1954114Z ##[group]Setting up auth
+2026-08-14T17:54:13.1955729Z Removing SSH command configuration
+2026-08-14T17:54:13.1969963Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-08-14T17:54:13.2019971Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-08-14T17:54:13.2396767Z Removing HTTP extra header
+2026-08-14T17:54:13.2402909Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-08-14T17:54:13.2454401Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-08-14T17:54:13.2703146Z Removing includeIf entries pointing to credentials config files
+2026-08-14T17:54:13.2708284Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-08-14T17:54:13.2755162Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-08-14T17:54:13.2993190Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-091ff7e5-3a17-4451-a440-074a23a8fcf0.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-08-14T17:54:13.3037743Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/***.cloudinary.runners.openapiclient/***.cloudinary.runners.openapiclient/.git.path /home/runner/work/_temp/git-credentials-091ff7e5-3a17-4451-a440-074a23a8fcf0.config
+2026-08-14T17:54:13.3073069Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/***.cloudinary.runners.openapiclient/***.cloudinary.runners.openapiclient/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-091ff7e5-3a17-4451-a440-074a23a8fcf0.config
+2026-08-14T17:54:13.3110864Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-091ff7e5-3a17-4451-a440-074a23a8fcf0.config
+2026-08-14T17:54:13.3146531Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-091ff7e5-3a17-4451-a440-074a23a8fcf0.config
+2026-08-14T17:54:13.3179636Z ##[endgroup]
+2026-08-14T17:54:13.3181081Z ##[group]Fetching the repository
+2026-08-14T17:54:13.3188699Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ed3c92b1e4e1048f5edfd3a3ee8ada0ded3ae4c1:refs/remotes/origin/main
+2026-08-14T17:54:13.7341152Z From https://github.com/***/***.cloudinary.runners.openapiclient
+2026-08-14T17:54:13.7342944Z  * [new ref]         ed3c92b1e4e1048f5edfd3a3ee8ada0ded3ae4c1 -> origin/main
+2026-08-14T17:54:13.7381109Z [command]/usr/bin/git branch --list --remote origin/main
+2026-08-14T17:54:13.7413742Z   origin/main
+2026-08-14T17:54:13.7422883Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-08-14T17:54:13.7450972Z ed3c92b1e4e1048f5edfd3a3ee8ada0ded3ae4c1
+2026-08-14T17:54:13.7456119Z ##[endgroup]
+2026-08-14T17:54:13.7457413Z ##[group]Determining the checkout info
+2026-08-14T17:54:13.7458294Z ##[endgroup]
+2026-08-14T17:54:13.7461574Z [command]/usr/bin/git sparse-checkout disable
+2026-08-14T17:54:13.7514628Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-08-14T17:54:13.7549558Z ##[group]Checking out the ref
+2026-08-14T17:54:13.7553933Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-08-14T17:54:13.7628810Z Switched to a new branch 'main'
+2026-08-14T17:54:13.7632949Z branch 'main' set up to track 'origin/main'.
+2026-08-14T17:54:13.7640404Z ##[endgroup]
+2026-08-14T17:54:13.7689356Z [command]/usr/bin/git log -1 --format=%H
+2026-08-14T17:54:13.7720345Z ed3c92b1e4e1048f5edfd3a3ee8ada0ded3ae4c1

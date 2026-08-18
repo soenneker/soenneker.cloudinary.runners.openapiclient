@@ -1,0 +1,35 @@
+﻿2026-08-14T17:54:13.8228660Z ##[group]Run actions/setup-dotnet@v6
+2026-08-14T17:54:13.8229285Z with:
+2026-08-14T17:54:13.8229712Z   dotnet-version: 10.0.x
+2026-08-14T17:54:13.8230189Z   cache: false
+2026-08-14T17:54:13.8230611Z env:
+2026-08-14T17:54:13.8231134Z   GH__USERNAME: ***
+2026-08-14T17:54:13.8232023Z   GH__TOKEN: ***
+2026-08-14T17:54:13.8232586Z   GIT__TOKEN: ***
+2026-08-14T17:54:13.8233063Z   GIT__NAME: ***
+2026-08-14T17:54:13.8233608Z   GIT__EMAIL: ***
+2026-08-14T17:54:13.8234206Z   NUGET__TOKEN: ***
+2026-08-14T17:54:13.8234661Z   BUILD_VERSION: 4.0.153
+2026-08-14T17:54:13.8235152Z ##[endgroup]
+2026-08-14T17:54:13.9583605Z [command]/home/runner/work/_actions/actions/setup-dotnet/v6/externals/install-dotnet.sh --skip-non-versioned-files --runtime dotnet --channel LTS
+2026-08-14T17:54:14.3573774Z dotnet-install: Attempting to download using aka.ms link https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.11/dotnet-runtime-10.0.11-linux-x64.tar.gz
+2026-08-14T17:54:14.5933076Z dotnet-install: Remote file https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.11/dotnet-runtime-10.0.11-linux-x64.tar.gz size is 36639275 bytes.
+2026-08-14T17:54:14.5939902Z dotnet-install: Extracting archive from https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.11/dotnet-runtime-10.0.11-linux-x64.tar.gz
+2026-08-14T17:54:15.3007126Z dotnet-install: Downloaded file size is 36639275 bytes.
+2026-08-14T17:54:15.3008520Z dotnet-install: The remote and local file sizes are equal.
+2026-08-14T17:54:15.3285497Z dotnet-install: Installed version is 10.0.11
+2026-08-14T17:54:15.3339709Z dotnet-install: Adding to current process PATH: `/usr/share/dotnet`. Note: This change will be visible only when sourcing script.
+2026-08-14T17:54:15.3342300Z dotnet-install: Note that the script does not resolve dependencies during installation.
+2026-08-14T17:54:15.3343409Z dotnet-install: To check the list of dependencies, go to https://learn.microsoft.com/dotnet/core/install, select your operating system and check the "Dependencies" section.
+2026-08-14T17:54:15.3345012Z dotnet-install: Installation finished successfully.
+2026-08-14T17:54:15.3365806Z [command]/home/runner/work/_actions/actions/setup-dotnet/v6/externals/install-dotnet.sh --skip-non-versioned-files --channel 10.0
+2026-08-14T17:54:15.5375363Z dotnet-install: Attempting to download using aka.ms link https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.400/dotnet-sdk-10.0.400-linux-x64.tar.gz
+2026-08-14T17:54:16.3104956Z dotnet-install: Remote file https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.400/dotnet-sdk-10.0.400-linux-x64.tar.gz size is 240133692 bytes.
+2026-08-14T17:54:16.3110135Z dotnet-install: Extracting archive from https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.400/dotnet-sdk-10.0.400-linux-x64.tar.gz
+2026-08-14T17:54:21.2332389Z dotnet-install: Downloaded file size is 240133692 bytes.
+2026-08-14T17:54:21.2333444Z dotnet-install: The remote and local file sizes are equal.
+2026-08-14T17:54:21.5379660Z dotnet-install: Installed version is 10.0.400
+2026-08-14T17:54:21.5440650Z dotnet-install: Adding to current process PATH: `/usr/share/dotnet`. Note: This change will be visible only when sourcing script.
+2026-08-14T17:54:21.5442416Z dotnet-install: Note that the script does not resolve dependencies during installation.
+2026-08-14T17:54:21.5472873Z dotnet-install: To check the list of dependencies, go to https://learn.microsoft.com/dotnet/core/install, select your operating system and check the "Dependencies" section.
+2026-08-14T17:54:21.5474597Z dotnet-install: Installation finished successfully.
